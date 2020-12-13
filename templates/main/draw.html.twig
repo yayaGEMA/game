@@ -1,0 +1,46 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Dessine !{% endblock %}
+
+{% block body %}
+
+<div class="row mx-0">
+    <div class="col-12 justify-content-center px-0">
+        <canvas id="sketchpad"></canvas>
+    </div>
+</div>
+<div class="row mx-0">
+    <div class="col-12 d-flex justify-content-center my-2">
+        Épaisseur : <select id="selWidth" class="mx-2">
+            <option value="1">1</option>
+            <option value="3" selected="selected">3</option>
+            <option value="5">5</option>
+            <option value="7">7</option>
+            <option value="9">9</option>
+            <option value="11">11</option>
+        </select>
+        Couleur : <select id="selColor" class="mx-2">
+            <option value="black" selected="selected" style="color: black;">noir</option>
+            <option value="blue">bleu</option>
+            <option value="red">rouge</option>
+            <option value="green">vert</option>
+            <option value="yellow">jaune</option>
+            <option value="gray">gris</option>
+        </select>
+    </div>
+</div>
+<div class="row mx-0">
+    <div class="col-12 d-flex justify-content-center my-2">
+        <input type="submit" value="Clear Sketchpad" id="clearbutton" onclick="clearCanvas(canvas,ctx);">
+    </div>
+</div>
+
+<div class="row mx-0">
+    <div class="col-12 d-flex justify-content-center">
+        
+    </div>
+</div>
+
+{% endblock %}
+
+{% block javascripts %}{% endblock %}
